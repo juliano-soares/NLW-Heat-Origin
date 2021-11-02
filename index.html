@@ -24,18 +24,19 @@
           <img
             src="https://github.com/juliano-soares.png"
             alt="Foto pessoal"
+            id="userImage"
           />
         </div>
 
         <h1 id="userName">Juliano Soares</h1>
-        <a href="https://github.com/juliano-soares"
+        <a id="userLink" href="https://github.com/juliano-soares"
           target="_blank"
         >
           <img src="images/github.svg" alt="ícone github" />
-          Juliano Soares</a
+          <span id="userLogin">Juliano Soares</span></a
         >
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="userBio">An instructor focused on helping pople start programming for web</p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -82,24 +83,6 @@
       </div>
     </main>
 
-    <script>
-      const linksRedesSocial = {
-        github: 'juliano-soares',
-        youtube: 'UC9yg06diEl3IyPyPOsDa_oQ',
-        facebook: 'julianoleonardosoares',
-        instagram: 'juliano_ls',
-        twitter: 'juliano_ls2'
-      }
-
-      function changeSocialMediaLinks() {
-        for(let li of socialLinks.children) {
-          const social = li.getAttribute("class")
-
-          li.children[0].href = `https://${social}.com/${linksRedesSocial[social]}`
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
