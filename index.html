@@ -27,53 +27,79 @@
           />
         </div>
 
-        <h1>Juliano Soares</h1>
-        <a href="https://github.com/juliano-soares">
+        <h1 id="userName">Juliano Soares</h1>
+        <a href="https://github.com/juliano-soares"
+          target="_blank"
+        >
           <img src="images/github.svg" alt="ícone github" />
           Juliano Soares</a
         >
 
         <p>An instructor focused on helping pople start programming for web</p>
 
-        <ul>
-          <li>
-            <a href="https://www.youtube.com/channel/UC9yg06diEl3IyPyPOsDa_oQ">
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://www.youtube.com/channel/UC9yg06diEl3IyPyPOsDa_oQ"
+              target="_blank"
+            >
               <img
                 src="images/youtube.svg"
                 alt="ícone youtube"
-                target="_blank"
               />
             </a>
           </li>
-          <li>
-            <a href="https://facebook.com/julianoleonardosoares">
+          <li class="facebook">
+            <a href="https://facebook.com/julianoleonardosoares"
+              target="_blank"
+            >
               <img
                 src="images/facebook.svg"
                 alt="ícone facebook"
-                target="_blank"
               />
             </a>
           </li>
-          <li>
-            <a href="https://instagram.com/juliano_ls">
+          <li class="instagram">
+            <a href="https://instagram.com/juliano_ls"
+              target="_blank"
+            >
               <img
                 src="images/instagram.svg"
                 alt="ícone instagram"
-                target="_blank"
               />
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/juliano_ls2">
+          <li class="twitter">
+            <a href="https://twitter.com/juliano_ls2"
+              target="_blank"
+            >
               <img
                 src="images/twitter.svg"
                 alt="ícone twitter"
-                target="_blank"
               />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const linksRedesSocial = {
+        github: 'juliano-soares',
+        youtube: 'UC9yg06diEl3IyPyPOsDa_oQ',
+        facebook: 'julianoleonardosoares',
+        instagram: 'juliano_ls',
+        twitter: 'juliano_ls2'
+      }
+
+      function changeSocialMediaLinks() {
+        for(let li of socialLinks.children) {
+          const social = li.getAttribute("class")
+
+          li.children[0].href = `https://${social}.com/${linksRedesSocial[social]}`
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
